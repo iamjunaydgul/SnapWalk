@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="5dp"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="3dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/white"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/profileLayout"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                android:id="@+id/uPictureIV"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add_image" >
+            </com.blogspot.atifsoftwares.circularimageview.CircularImageView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <customfonts.MyTextView
+                    android:id="@+id/uNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#0000"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#ADCCE2"
+                    android:textSize="20sp"
+                    android:text="Name" />
+                <customfonts.MyTextView
+                    android:id="@+id/uTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#0000"
+                    android:textColor="#ADCCE2"
+                    android:textColorHint="#ADCCE2"
+                    android:text="33 min" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/moreButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_image_more"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <customfonts.MyTextView
+            android:id="@+id/pTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="#0000"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="#ADCCE2"
+            android:text="Title"
+            android:autoLink="all"/>
+        <customfonts.MyTextView
+            android:id="@+id/pDescriptionTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:background="#0000"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="#ADCCE2"
+            android:textStyle="bold"
+            android:autoLink="all"
+            android:text="Post Description"/>
+
+        <ImageView
+            android:id="@+id/pImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <customfonts.MyTextView
+                android:id="@+id/pLikesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:text="1.2k Likes"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="#ADCCE2" />
+            <customfonts.MyTextView
+                android:id="@+id/pCommentsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:text="1.2k Comments"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="#ADCCE2" />
+        </LinearLayout>
+        <!--wasted whole day for this one fucking shit line wrote v instead of V-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <customfonts.MyTextView
+                android:id="@+id/likeButton"
+                android:background="@drawable/angle"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:padding="2dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:drawableLeft="@drawable/ic_like"
+                android:layout_weight="0"
+                android:text="Like"/>
+
+            <customfonts.MyTextView
+                android:id="@+id/commentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/angle"
+                android:textAllCaps="false"
+                android:textSize="16dp"
+                android:padding="5dp"
+                android:layout_marginStart="2dp"
+                android:textColor="#fff"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="0"
+                android:drawableLeft="@drawable/ic_comment"
+                android:text="Comment"
+                android:layout_marginLeft="2dp" />
+            <customfonts.MyTextView
+                android:id="@+id/shareButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textAllCaps="false"
+                android:padding="2dp"
+                android:background="@drawable/angle"
+                android:textColor="#fff"
+                android:drawableLeft="@drawable/ic_share"
+                android:layout_weight="0"
+                android:text="Share"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
